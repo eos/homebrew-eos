@@ -17,12 +17,12 @@ class Eos < Formula
 
   # technical stuff
   depends_on "python3"
-  depends_on "boost-python3"
+  depends_on "boost-python"
   depends_on "yaml-cpp"
 
   def install
     system "./autogen.bash"
-    system "./configure", "--enable-pmc", "--prefix=#{prefix}"
+    system "./configure", "--enable-pmc", "--enable-python", "--prefix=#{prefix}"
     system "make", "-j", "all"
     system "make", "install"
   end
