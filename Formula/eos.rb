@@ -29,6 +29,6 @@ class Eos < Formula
   end
 
   test do
-    system "false"
+    system "make", "check"
   end
 end
