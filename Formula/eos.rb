@@ -29,6 +29,6 @@ class Eos < Formula
   end
 
   test do
-    system "make", "check"
+    system "make", "check", "-j", "VERBOSE=1"
   end
 end
