@@ -3,11 +3,13 @@ class Eos < Formula
   homepage "https://eos.github.io"
   head "https://github.com/eos/eos.git", :branch => "master"
 
-  # build utilities
+  # system software
   depends_on "autoconf"
   depends_on "automake"
   depends_on "libtool"
   depends_on "pkg-config"
+  depends_on "boost"
+  depends_on "yaml-cpp"
 
   # scientific libraries
   depends_on "pmclib"
@@ -15,10 +17,9 @@ class Eos < Formula
   depends_on "hdf5"
   depends_on "minuit2"
 
-  # technical stuff
+  # python software
   depends_on "python3"
   depends_on "boost-python"
-  depends_on "yaml-cpp"
 
   def install
     system "./autogen.bash"
