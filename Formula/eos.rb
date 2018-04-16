@@ -19,7 +19,7 @@ class Eos < Formula
 
   # python software
   depends_on "python3"
-  depends_on "boost-python"
+  depends_on "boost-python3"
 
   def install
     system "./autogen.bash"
