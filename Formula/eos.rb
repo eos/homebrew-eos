@@ -22,8 +22,15 @@ class Eos < Formula
   depends_on "boost-python3"
 
   def install
+    pyver = Language::Python.major_minor_version "python3"
+    pysuffix = pyver.to_s.gsub(/\./mi, '')
+
     system "./autogen.bash"
-    system "./configure", "--enable-pmc", "--enable-python", "--prefix=#{prefix}"
+    system "./configure",
+	   "--enable-pmc",
+	   "--enable-python",
+	   "--prefix=#{prefix}",
+	   "--with-boost-python-suffix=#{pysuffix}"
     system "make", "-j", "all"
     system "make", "install"
   end
