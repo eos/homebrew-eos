@@ -53,7 +53,7 @@ index 1e628b8..e381050 100644
    testErrorRet(opt->cvg==0,-10001000,"did not converge",*err,__LINE__,NULL);
    res = opt->get_result(opt,err);
 -  forwardError(*err,__LINE__,);
-+  forwardError(*err,__LINE__,NULL);
++  forwardError(*err,__LINE__,res);
    
    return res;
  }
