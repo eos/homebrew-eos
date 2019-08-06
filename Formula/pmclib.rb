@@ -10,6 +10,12 @@ class Pmclib < Formula
   patch :DATA
 
   def install
+    # disable building MPI-related parts
+    system "sed",
+        "-i", "",
+        "-e", "260,269d",
+        "wscript"
+
     system "./waf", "--m64", "--prefix=#{prefix}", "configure"
     system "./waf", "build"
     system "./waf", "install"
