@@ -37,6 +37,10 @@ class Pmclib < Formula
            "-e", "s/#include \"maths_base\\.h\"/#include <pmctools\\/maths_base.h>/",
 	   f
     end
+    system "sed",
+        "-i", "",
+        "-e", "s/\"extra\"/\" extra \"/p",
+        "#{prefix}/include/pmctools/errorlist.h"
   end
 
   test do
