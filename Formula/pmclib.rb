@@ -1,7 +1,10 @@
 class Pmclib < Formula
   desc "EOS specific build of pmclib"
   homepage "http://www2.iap.fr/users/kilbinge/CosmoPMC/"
-  url "http://www2.iap.fr/users/kilbinge/CosmoPMC/pmclib_v1.01.tar.gz"
+  # homepage has been removed:
+  #url "http://www2.iap.fr/users/kilbinge/CosmoPMC/pmclib_v1.01.tar.gz"
+  # mirrored at:
+  url "http://users.ph.tum.de/ga53yez/pmclib_v1.01.tar.gz"
   sha256 "4e7293ce9dfdd01091a8e27551fa7e0790ee92b657cf8c3d4a93cebe41c0fd87"
 
   depends_on "fftw"
