@@ -22,8 +22,7 @@ class Eos < Formula
   depends_on "boost-python3"
 
   def install
-    pyver = Language::Python.major_minor_version "python3"
-    pysuffix = pyver.to_s.gsub(/\./mi, '')
+    pysuffix = `python3 -c "import sys ; print('{x}{y}'.format(x=sys.version_info.major, y=sys.version_info.minor))"`
 
     system "./autogen.bash"
     system "./configure",
