@@ -30,7 +30,7 @@ class Eos < Formula
 	   "--enable-python",
 	   "--prefix=#{prefix}",
 	   "--with-boost-python-suffix=#{pysuffix}"
-    system "make", "all"
+    system "make", "-j4", "all"
     system "make", "install"
   end
 
