@@ -15,7 +15,6 @@ class Eos < Formula
   depends_on "pmclib"
   depends_on "gsl"
   depends_on "hdf5"
-  depends_on "minuit2"
 
   # python software
   depends_on "python3"
