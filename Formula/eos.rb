@@ -12,9 +12,7 @@ class Eos < Formula
   depends_on "yaml-cpp"
 
   # scientific libraries
-  depends_on "pmclib"
   depends_on "gsl"
-  depends_on "hdf5"
 
   # python software
   depends_on "python3"
@@ -25,7 +23,6 @@ class Eos < Formula
 
     system "./autogen.bash"
     system "./configure",
-	   "--enable-pmc",
 	   "--enable-python",
 	   "--prefix=#{prefix}",
 	   "--with-boost-python-suffix=#{pysuffix}"
