@@ -17,7 +17,7 @@ class BoostPython39AT185 < Formula
   
     #depends_on "numpy" => :build
     depends_on "eos/eos/boost@1.85"
-    depends_on "python@3.12"
+    depends_on "python@3.9"
   
     def python3
       "python3.9"
