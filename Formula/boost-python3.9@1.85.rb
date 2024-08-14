@@ -11,6 +11,7 @@ class BoostPython39AT185 < Formula
     end
 
     bottle do
+      root_url "https://github.com/eos/homebrew-eos/releases/download/2024-08/"
       sha256 cellar: :any, sonoma: "a82b696dc83b9781d7993de1e40900b7f2191857619d16e9689d70beaf699403"
     end
   
